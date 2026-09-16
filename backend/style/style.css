@@ -1,0 +1,114 @@
+/* admin.css */
+
+/* Estilos generales */
+body { 
+    font-family: Arial, sans-serif; 
+    padding: 20px; 
+    background-color: #f4f4f9; 
+    margin: 0;
+}
+
+.container { 
+    max-width: 900px; 
+    margin: 0 auto; 
+    background: white; 
+    padding: 30px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+}
+
+h2, h3 {
+    color: #333;
+}
+
+/* Formulario generador */
+form { 
+    display: flex; 
+    gap: 15px; 
+    margin-bottom: 30px; 
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+input[type="text"] { 
+    flex: 1; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    font-size: 16px;
+}
+
+button { 
+    padding: 12px 24px; 
+    background-color: #4CAF50; 
+    color: white; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover { 
+    background-color: #45a049; 
+}
+
+/* Tabla de invitados */
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 20px; 
+}
+
+th, td { 
+    padding: 15px; 
+    text-align: left; 
+    border-bottom: 1px solid #ddd; 
+}
+
+th { 
+    background-color: #f8f8f8; 
+    font-weight: bold;
+    color: #555;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Etiquetas de estado (Badges) */
+.badge { 
+    padding: 6px 12px; 
+    border-radius: 20px; 
+    font-size: 12px; 
+    font-weight: bold; 
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.pendiente { background-color: #ffeeba; color: #856404; }
+.asistira { background-color: #d4edda; color: #155724; }
+.no-asistira { background-color: #f8d7da; color: #721c24; }
+
+/* Enlaces de la tabla */
+td a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+/* Botón de la tabla */
+td button {
+    padding: 8px 12px;
+    font-size: 14px;
+    background-color: #008CBA;
+}
+
+td button:hover {
+    background-color: #0073e6;
+}

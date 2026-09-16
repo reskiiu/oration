@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Boda - Ana & Juan</title>
+    <!-- Aquí luego conectaremos el archivo CSS para el diseño -->
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sección Principal -->
+    <header class="hero-section">
+        <div class="hero-content">
+            <!-- Rama botánica decorativa -->
+            <svg class="hero-botanical-left" viewBox="0 0 120 160" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.3">
+                <path d="M20 155 C 30 110, 45 60, 95 10" stroke-linecap="round"/>
+                <path d="M25 125 C 10 118, 5 102, 12 94 C 18 100, 24 110, 26 118"/>
+                <path d="M35 98 C 50 92, 56 78, 48 70 C 42 78, 38 88, 36 94"/>
+                <path d="M46 72 C 30 68, 24 52, 32 44 C 38 52, 43 62, 45 68"/>
+                <path d="M60 48 C 74 42, 78 28, 70 20 C 64 28, 60 38, 58 44"/>
+            </svg>
+
+            <div class="hero-text-wrap">
+                <span class="hero-eyebrow">NUESTRA BODA</span>
+                <h1 class="hero-title">Ana &amp; Juan</h1>
+                <p class="hero-tagline">Dos almas, un mismo destino.</p>
+                <div class="hero-date">
+                    <span class="hero-date-icon">📅</span>
+                    <span>18 · 12 · 2026</span>
+                </div>
+                <!-- Badge del invitado conectado a JS -->
+                <div class="hero-guest-box">
+                    <span>Invitación para:</span>
+                    <strong id="guest-name">Cargando invitación...</strong>
+                </div>
+                <a href="#story" class="btn-hero">Ver invitación →</a>
+            </div>
+
+            <div class="hero-scroll">Desliza ↓</div>
+        </div>
+    </header>
+
+    <!-- 2. Nuestra Historia -->
+    <section id="story" class="story-section">
+        <div class="card story-card">
+            <div class="story-text-col">
+                <span class="section-eyebrow">NUESTRA HISTORIA</span>
+                <h2 class="story-heading">Un camino que nos trajo hasta aquí</h2>
+                <p class="story-desc">
+                    Todo comenzó en un lugar inesperado, una conversación, una mirada y desde entonces no hemos dejado de elegirnos. Cada momento, por pequeño que parezca, ha sido parte de esta hermosa historia que hoy nos lleva a dar el siguiente gran paso.
+                </p>
+                <a href="#locations" class="btn-pill-outline">Conocer más</a>
+            </div>
+            <div class="story-visual-col">
+                <div class="polaroids-group">
+                    <div class="polaroid-item polaroid-top">
+                        <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=500&q=80" alt="Momentos juntos">
+                    </div>
+                    <div class="polaroid-item polaroid-bottom">
+                        <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=500&q=80" alt="Anillos de compromiso">
+                    </div>
+                </div>
+                <!-- Rama botánica decorativa -->
+                <svg class="botanical-branch-story" viewBox="0 0 100 100" fill="none" stroke="#9e9587" stroke-width="1.3">
+                    <path d="M45 95 C 42 70, 48 40, 58 15" stroke-linecap="round"/>
+                    <path d="M44 75 C 32 72, 28 60, 34 54 C 40 62, 44 68, 44 72"/>
+                    <path d="M47 58 C 58 56, 62 45, 56 38 C 50 46, 47 52, 47 56"/>
+                    <path d="M50 42 C 38 38, 35 28, 40 22 C 45 28, 48 36, 49 40"/>
+                    <path d="M53 28 C 62 25, 65 14, 60 10 C 56 16, 54 22, 53 26"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Ubicaciones (Ceremonia y Recepción) -->
+    <section id="locations" class="locations-section">
+        <!-- Tarjeta Ceremonia -->
+        <div class="card location-card">
+            <div class="location-img-wrap">
+                <img src="https://images.unsplash.com/photo-1548625361-16eb58f4a138?auto=format&fit=crop&w=600&q=80" alt="Ceremonia Iglesia">
+            </div>
+            <div class="location-info">
+                <div class="location-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2v4M10 4h4M4 10l8-6 8 6v10H4V10zM9 20v-5a3 3 0 0 1 6 0v5"></path>
+                    </svg>
+                </div>
+                <h3>Ceremonia</h3>
+                <ul class="location-details">
+                    <li>
+                        <span class="detail-icon">📅</span>
+                        <span>Sábado, 20 de septiembre de 2025</span>
+                    </li>
+                    <li>
+                        <span class="detail-icon">🕒</span>
+                        <span>4:00 p.m.</span>
+                    </li>
+                    <li>
+                        <span class="detail-icon">📍</span>
+                        <div class="address-text">
+                            <strong>Iglesia San José</strong>
+                            <span>Cra. 12 #45-67, Medellín, Antioquia</span>
+                        </div>
+                    </li>
+                </ul>
+                <a href="https://maps.google.com" target="_blank" class="btn-location">
+                    <svg class="btn-pin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    Ver ubicación en Google Maps
+                </a>
+            </div>
+        </div>
+
+        <!-- Tarjeta Recepción -->
+        <div class="card location-card">
+            <div class="location-img-wrap">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80" alt="Recepción Hacienda">
+            </div>
+            <div class="location-info">
+                <div class="location-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M8 22h8M12 15v7M16 2l1 6a4 4 0 0 1-4 4 4 4 0 0 1-4-4l1-6h6z"></path>
+                        <path d="M19 5l2 1a3 3 0 0 1 1 3c0 2-2 3-4 3"></path>
+                    </svg>
+                </div>
+                <h3>Recepción</h3>
+                <ul class="location-details">
+                    <li>
+                        <span class="detail-icon">📅</span>
+                        <span>Sábado, 20 de septiembre de 2025</span>
+                    </li>
+                    <li>
+                        <span class="detail-icon">🕒</span>
+                        <span>6:30 p.m.</span>
+                    </li>
+                    <li>
+                        <span class="detail-icon">📍</span>
+                        <div class="address-text">
+                            <strong>Hacienda La Esperanza</strong>
+                            <span>Vereda El Porvenir, Medellín, Antioquia</span>
+                        </div>
+                    </li>
+                </ul>
+                <a href="https://maps.google.com" target="_blank" class="btn-location">
+                    <svg class="btn-pin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    Ver ubicación en Google Maps
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Cuenta Regresiva -->
+    <div class="countdown-card">
+        <!-- Rama botánica en esquina izquierda -->
+        <svg class="countdown-botanical" viewBox="0 0 120 160" fill="none" stroke="#7e8579" stroke-width="1.4">
+            <path d="M35 155 C 40 110, 50 60, 85 10" stroke-linecap="round"/>
+            <path d="M38 125 C 20 120, 14 102, 22 94 C 28 100, 36 112, 38 120"/>
+            <path d="M46 96 C 62 90, 68 76, 58 68 C 52 76, 48 86, 46 92"/>
+            <path d="M54 70 C 38 66, 32 50, 40 42 C 46 50, 50 60, 53 66"/>
+            <path d="M64 48 C 78 42, 82 28, 74 22 C 68 30, 64 38, 63 44"/>
+        </svg>
+        <div class="countdown-inner">
+            <span class="countdown-eyebrow">FALTAN PARA EL GRAN DÍA</span>
+            <div id="timer">
+                <div class="timer-col">
+                    <span id="dias">00</span>
+                    <p>Días</p>
+                </div>
+                <div class="timer-divider"></div>
+                <div class="timer-col">
+                    <span id="horas">00</span>
+                    <p>Horas</p>
+                </div>
+                <div class="timer-divider"></div>
+                <div class="timer-col">
+                    <span id="minutos">00</span>
+                    <p>Minutos</p>
+                </div>
+                <div class="timer-divider"></div>
+                <div class="timer-col">
+                    <span id="segundos">00</span>
+                    <p>Segundos</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. Código de Vestimenta -->
+    <section class="dresscode-section">
+        <div class="card dresscode-card">
+            <!-- Columna 1: Información y Colores -->
+            <div class="dresscode-col-info">
+                <div class="dresscode-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 3a3 3 0 0 0-3 3c0 1.2.7 2.2 1.7 2.7L2 15a2 2 0 0 0 1.2 2.5l.8.2h16l.8-.2A2 2 0 0 0 22 15l-8.7-6.3A3 3 0 0 0 15 6a3 3 0 0 0-3-3z"></path>
+                        <path d="M2 17h20"></path>
+                    </svg>
+                </div>
+                <h3>Código de vestimenta</h3>
+                <h4 class="dresscode-type">Elegante formal</h4>
+                <p class="dresscode-palette-desc">Te sugerimos tonos neutros, pasteles o colores tierra.</p>
+                <div class="dresscode-swatches">
+                    <span class="swatch" style="background-color: #E8E4DB;" title="Crema suave"></span>
+                    <span class="swatch" style="background-color: #CBBAA6;" title="Arena"></span>
+                    <span class="swatch" style="background-color: #B48E78;" title="Terracota"></span>
+                    <span class="swatch" style="background-color: #536353;" title="Verde Olivo"></span>
+                    <span class="swatch" style="background-color: #223347;" title="Azul Marino"></span>
+                    <span class="swatch" style="background-color: #C0C0C0;" title="Gris Perla"></span>
+                </div>
+            </div>
+
+            <!-- Columna 2: Pareja Ilustrada -->
+            <div class="dresscode-col-visual">
+                <svg class="couple-illustration" viewBox="0 0 160 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Hombre en traje formal oscuro -->
+                    <g class="man-figure">
+                        <!-- Cabeza y Cabello -->
+                        <ellipse cx="60" cy="36" rx="9" ry="12" fill="#E8CBB3"/>
+                        <path d="M51 34 C 51 22, 69 22, 69 34 C 69 28, 62 25, 55 28 Z" fill="#2E241E"/>
+                        <rect x="57" y="46" width="6" height="8" fill="#E8CBB3"/>
+                        <!-- Camisa blanca y corbata -->
+                        <path d="M55 52 L65 52 L62 70 L58 70 Z" fill="#FFFFFF"/>
+                        <path d="M59 52 L61 52 L62 72 L60 76 L58 72 Z" fill="#1C1E1B"/>
+                        <!-- Saco formal -->
+                        <path d="M45 52 C 50 50, 70 50, 75 52 L 77 125 L 68 125 L 60 74 L 52 125 L 43 125 Z" fill="#2F352E"/>
+                        <!-- Mangas y Manos -->
+                        <path d="M45 52 L 39 105 L 45 106 L 50 68 Z" fill="#282E27"/>
+                        <ellipse cx="38" cy="112" rx="4" ry="6" fill="#E8CBB3"/>
+                        <path d="M75 52 L 81 105 L 75 106 L 70 68 Z" fill="#282E27"/>
+                        <ellipse cx="82" cy="112" rx="4" ry="6" fill="#E8CBB3"/>
+                        <!-- Pantalón -->
+                        <path d="M47 125 L 58 125 L 56 215 L 45 215 Z" fill="#282E27"/>
+                        <path d="M62 125 L 73 125 L 75 215 L 64 215 Z" fill="#282E27"/>
+                        <!-- Zapatos -->
+                        <ellipse cx="50" cy="218" rx="8" ry="3.5" fill="#181A18"/>
+                        <ellipse cx="70" cy="218" rx="8" ry="3.5" fill="#181A18"/>
+                    </g>
+                    <!-- Mujer en vestido largo verde olivo -->
+                    <g class="woman-figure">
+                        <!-- Cabello detrás -->
+                        <path d="M96 38 C 92 34, 95 65, 92 78 C 96 82, 114 82, 118 78 C 115 65, 118 34, 114 38 Z" fill="#251C17"/>
+                        <!-- Cabeza -->
+                        <ellipse cx="105" cy="38" rx="8" ry="11" fill="#ECCDB7"/>
+                        <!-- Cabello frontal -->
+                        <path d="M97 35 C 97 25, 113 25, 113 35 C 111 29, 103 27, 99 30 Z" fill="#2E241E"/>
+                        <!-- Cuello y Hombros -->
+                        <rect x="103" y="47" width="5" height="7" fill="#ECCDB7"/>
+                        <path d="M94 54 C 101 51, 109 51, 116 54 L 114 62 L 96 62 Z" fill="#ECCDB7"/>
+                        <!-- Tirantes finos -->
+                        <line x1="99" y1="53" x2="99" y2="62" stroke="#485842" stroke-width="1.8"/>
+                        <line x1="111" y1="53" x2="111" y2="62" stroke="#485842" stroke-width="1.8"/>
+                        <!-- Corpiño Vestido Olivo -->
+                        <path d="M95 62 C 98 64, 102 65, 105 63 C 108 65, 112 64, 115 62 L 112 90 C 108 92, 102 92, 98 90 Z" fill="#4B5A44"/>
+                        <!-- Brazos y Manos -->
+                        <path d="M94 54 L 88 100 L 92 101 L 97 64 Z" fill="#ECCDB7"/>
+                        <ellipse cx="88" cy="106" rx="3.5" ry="5.5" fill="#ECCDB7"/>
+                        <path d="M116 54 L 122 100 L 118 101 L 113 64 Z" fill="#ECCDB7"/>
+                        <ellipse cx="122" cy="106" rx="3.5" ry="5.5" fill="#ECCDB7"/>
+                        <!-- Falda larga con vuelo elegante -->
+                        <path d="M98 90 C 103 92, 107 92, 112 90 L 126 218 C 112 222, 98 222, 84 218 Z" fill="#485842"/>
+                        <!-- Pliegues de sombra sutil -->
+                        <path d="M103 92 L 100 220" stroke="#3D4B38" stroke-width="1.2" opacity="0.6"/>
+                        <path d="M107 92 L 112 220" stroke="#3D4B38" stroke-width="1.2" opacity="0.6"/>
+                        <!-- Zapatos -->
+                        <ellipse cx="102" cy="220" rx="4" ry="2" fill="#2E241E"/>
+                        <ellipse cx="110" cy="220" rx="4" ry="2" fill="#2E241E"/>
+                    </g>
+                </svg>
+            </div>
+
+            <!-- Columna 3: Evitar -->
+            <div class="dresscode-col-avoid">
+                <h4 class="avoid-title">Evita:</h4>
+                <ul class="avoid-list">
+                    <li>
+                        <span class="avoid-icon">👕</span>
+                        <span>Ropa deportiva</span>
+                    </li>
+                    <li>
+                        <span class="avoid-icon">👖</span>
+                        <span>Jeans</span>
+                    </li>
+                    <li>
+                        <span class="avoid-icon">🎨</span>
+                        <span>Colores muy llamativos</span>
+                    </li>
+                </ul>
+                <!-- Rama botánica en esquina inferior derecha -->
+                <svg class="botanical-branch-dresscode" viewBox="0 0 90 90" fill="none" stroke="#9e9587" stroke-width="1.3">
+                    <path d="M80 85 C 65 65, 45 42, 10 25" stroke-linecap="round"/>
+                    <path d="M66 68 C 60 52, 46 48, 40 54 C 46 62, 56 68, 62 68"/>
+                    <path d="M52 52 C 48 36, 34 34, 28 40 C 34 46, 44 50, 48 50"/>
+                    <path d="M35 38 C 34 24, 20 22, 16 28 C 20 32, 28 36, 32 37"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Un Mensaje Para Ti -->
+    <section class="message-section">
+        <div class="card message-card">
+            <div class="message-text-col">
+                <div class="message-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                </div>
+                <h3>Un mensaje para ti</h3>
+                <p class="message-body">
+                    Queremos compartir este día tan especial con las personas que han sido parte de nuestra historia. Gracias por estar, por su cariño y por ser parte de este comienzo.
+                </p>
+                <div class="message-signature-wrap">
+                    <p class="message-signature">Ana &amp; Juan</p>
+                    <span class="signature-heart">♡</span>
+                </div>
+            </div>
+            <div class="message-photo-col">
+                <img src="image/flor.jpg" alt="Flores de boda" class="message-photo">
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Mesa de Regalos -->
+    <section class="gifts-section">
+        <div class="card gifts-card">
+            <h3>Mesa de Regalos</h3>
+            <p class="gifts-intro">
+                El mejor regalo que podemos recibir es tu presencia y bendición en nuestro matrimonio. Si deseas tener un detalle adicional con nosotros para nuestro nuevo hogar, ponemos a tu disposición las siguientes opciones:
+            </p>
+            <div class="gifts-grid">
+                <div class="gift-option">
+                    <div class="gift-icon">✉️</div>
+                    <h4>Lluvia de Sobres &amp; Transferencia</h4>
+                    <p>Contaremos con buzón de sobres el día del evento, o si prefieres realizar transferencia bancaria:</p>
+                    <div class="bank-details">
+                        <p><strong>Banco:</strong> BBVA</p>
+                        <p><strong>Titular:</strong> Ana Sarrasola &amp; Juan Quintero</p>
+                        <p><strong>CLABE:</strong> 012 180 015489762341</p>
+                    </div>
+                </div>
+                <div class="gift-option">
+                    <div class="gift-icon">🎁</div>
+                    <h4>Tiendas Departamentales</h4>
+                    <p>Puedes consultar nuestras mesas de regalos con los siguientes números de evento:</p>
+                    <div class="store-links">
+                        <div class="store-item">
+                            <p><strong>Liverpool:</strong> Evento No. 51489201</p>
+                        </div>
+                        <div class="store-item">
+                            <p><strong>Amazon:</strong> Mesa de Bodas Ana &amp; Juan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Información Adicional -->
+    <section class="info-section">
+        <div class="card info-card">
+            <h3>Información Adicional</h3>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="info-icon">👶</span>
+                    <h4>Solo Adultos</h4>
+                    <p>Amamos a los más pequeños de la familia, pero para que todos puedan disfrutar y relajarse al máximo, nuestro evento será únicamente para adultos.</p>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">⏰</span>
+                    <h4>Puntualidad</h4>
+                    <p>Agradecemos llegar con 15 a 20 minutos de anticipación a la ceremonia para que nos acompañes desde el primer momento.</p>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">🏨</span>
+                    <h4>Hospedaje Sugerido</h4>
+                    <p>Hotel Hacienda San José. Contamos con tarifa especial mencionando el código <strong>BODA-AnaJuan</strong> al reservar.</p>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">🚗</span>
+                    <h4>Estacionamiento</h4>
+                    <p>El recinto cuenta con amplio estacionamiento propio y servicio gratuito de Valet Parking para todos nuestros invitados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Confirmación de Asistencia (RSVP) -->
+    <section class="interaction-section">
+        <div class="rsvp card rsvp-card">
+            <div class="rsvp-header">
+                <div class="rsvp-icon-wrapper">
+                    <svg class="rsvp-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <!-- Persona centro frente -->
+                        <circle cx="16" cy="11" r="4"></circle>
+                        <path d="M9 25c0-4 3.1-7 7-7s7 3 7 7"></path>
+                        <!-- Persona izquierda atrás -->
+                        <circle cx="8.5" cy="13.5" r="3"></circle>
+                        <path d="M4 25c0-3 2.2-5.5 5-5.9"></path>
+                        <!-- Persona derecha atrás -->
+                        <circle cx="23.5" cy="13.5" r="3"></circle>
+                        <path d="M23 19.1c2.8.4 5 2.9 5 5.9"></path>
+                    </svg>
+                </div>
+                <div class="rsvp-header-text">
+                    <h3>Confirma tu asistencia</h3>
+                    <p>Tu presencia es muy importante para nosotros.</p>
+                </div>
+            </div>
+            
+            <!-- Botones de acción -->
+            <div class="rsvp-buttons">
+                <button id="btn-yes" class="btn-rsvp btn-confirm" disabled>
+                    <svg class="btn-rsvp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Sí, asistiré</span>
+                </button>
+                <button id="btn-no" class="btn-rsvp btn-decline" disabled>
+                    <svg class="btn-rsvp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                    <span>No podré asistir</span>
+                </button>
+            </div>
+            
+            <p id="mensaje-estado"></p>
+        </div>
+    </section>
+
+    <!-- 9. Agradecimiento -->
+    <footer class="thank-you-section">
+        <div class="card thank-you-card">
+            <h3>¡Gracias por ser parte de nuestra historia!</h3>
+            <p class="thank-you-text">
+                Esperamos con mucha emoción celebrar contigo este día tan soñado y lleno de amor.
+            </p>
+            <p class="thank-you-names">Ana &amp; Juan</p>
+            <p class="thank-you-date">18 . 12 . 2026</p>
+        </div>
+    </footer>
+
+    <!-- Conectamos el script de la invitación -->
+    <script src="invitacion.js"></script>
+</body>
+</html>

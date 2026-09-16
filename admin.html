@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administrador - Invitaciones</title>
+    <link rel="stylesheet" href="./backend/style/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Gestión de Invitados</h2>
+        
+        <!-- Formulario para generar el enlace -->
+        <form id="form-invitado">
+            <input type="text" id="nombre-invitado" placeholder="Ej. Familia Pérez o Juan y María" required>
+            <button type="submit">Generar Invitación</button>
+        </form>
+
+        <!-- Tabla para validar confirmaciones -->
+        <h3>Lista de Invitaciones</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre(s)</th>
+                    <th>Enlace Personalizado</th>
+                    <th>Estado de Asistencia</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-invitados">
+                <!-- Los datos se cargarán aquí desde JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Librería para el tiempo real (Socket.io) -->
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
