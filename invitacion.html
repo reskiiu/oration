@@ -336,7 +336,7 @@
             </p>
             <div class="gifts-grid">
                 <div class="gift-option">
-                    <div class="gift-icon">✉️</div>
+                    <div class="gift-icon"></div>
                     <h4>Lluvia de Sobres &amp; Transferencia</h4>
                     <p>Contaremos con buzón de sobres el día del evento, o si prefieres realizar transferencia bancaria:</p>
                     <div class="bank-details">
@@ -346,7 +346,7 @@
                     </div>
                 </div>
                 <div class="gift-option">
-                    <div class="gift-icon">🎁</div>
+                    <div class="gift-icon"></div>
                     <h4>Tiendas Departamentales</h4>
                     <p>Puedes consultar nuestras mesas de regalos con los siguientes números de evento:</p>
                     <div class="store-links">
@@ -368,22 +368,22 @@
             <h3>Información Adicional</h3>
             <div class="info-grid">
                 <div class="info-item">
-                    <span class="info-icon">👶</span>
+                    <span class="info-icon"></span>
                     <h4>Solo Adultos</h4>
                     <p>Amamos a los más pequeños de la familia, pero para que todos puedan disfrutar y relajarse al máximo, nuestro evento será únicamente para adultos.</p>
                 </div>
                 <div class="info-item">
-                    <span class="info-icon">⏰</span>
+                    <span class="info-icon"></span>
                     <h4>Puntualidad</h4>
                     <p>Agradecemos llegar con 15 a 20 minutos de anticipación a la ceremonia para que nos acompañes desde el primer momento.</p>
                 </div>
                 <div class="info-item">
-                    <span class="info-icon">🏨</span>
+                    <span class="info-icon"></span>
                     <h4>Hospedaje Sugerido</h4>
                     <p>Hotel Hacienda San José. Contamos con tarifa especial mencionando el código <strong>BODA-AnaJuan</strong> al reservar.</p>
                 </div>
                 <div class="info-item">
-                    <span class="info-icon">🚗</span>
+                    <span class="info-icon"></span>
                     <h4>Estacionamiento</h4>
                     <p>El recinto cuenta con amplio estacionamiento propio y servicio gratuito de Valet Parking para todos nuestros invitados.</p>
                 </div>
@@ -445,6 +445,19 @@
             <p class="thank-you-names">Ana &amp; Juan</p>
             <p class="thank-you-date">18 . 12 . 2026</p>
         </div>
+
+        <!-- Reproductor de audio oculto (el atributo loop hace que se repita infinitamente) -->
+    <audio id="musica-fondo" loop>
+        <!-- Asegúrate de poner el nombre exacto de tu archivo mp3 aquí -->
+        <source src="./music/risk.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <!-- Botón flotante para controlar la música -->
+    <button id="btn-musica" class="floating-music-btn">
+        🔇 Reproducir Música
+    </button>
+
     </footer>
 
     <!-- Conectamos el script de la invitación -->

@@ -937,7 +937,31 @@ section, footer {
 
 
 
+/* Estilos para el botón flotante de música */
+.floating-music-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000; /* Asegura que siempre esté por encima de las fotos y el texto */
+    transition: background-color 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
 
+.floating-music-btn:hover {
+    background-color: var(--primary-green-hover);
+    transform: scale(1.05);
+}
 
 
 

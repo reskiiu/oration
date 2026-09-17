@@ -120,7 +120,52 @@ if (elementoDias && elementoHoras && elementoMinutos && elementoSegundos) {
     }, 1000);
 }
 
-// Cambia esto:
-// const API_URL = 'http://localhost:3000/api';
+// ----------------------------------------------------
+// LÓGICA DE LA MÚSICA DE FONDO (AUTOPLAY)
+// ----------------------------------------------------
+const reproductorMusica = document.getElementById('musica-fondo');
+const btnMusica = document.getElementById('btn-musica');
 
-// Por tu nueva URL de Render:
+let musicaReproduciendo = false;
+
+if (reproductorMusica) {
+    reproductorMusica.volume = 0.2; // Ajustamos el volumen al 20%
+}
+
+// Función para encender la música y cambiar el botón
+function encenderMusica() {
+    if (!musicaReproduciendo && reproductorMusica) {
+        reproductorMusica.play().then(() => {
+            if (btnMusica) btnMusica.textContent = '🔊 Pausar Música';
+            musicaReproduciendo = true;
+        }).catch((error) => {
+            console.log("Esperando interacción del usuario para reproducir audio.");
+        });
+    }
+}
+
+// 1. Intentamos reproducir apenas cargue la página
+window.addEventListener('load', () => {
+    encenderMusica();
+});
+
+// 2. Si el navegador lo bloqueó, lo activamos al primer clic en cualquier parte
+document.body.addEventListener('click', () => {
+    if (!musicaReproduciendo) {
+        encenderMusica();
+    }
+}, { once: true }); // El {once: true} asegura que este evento global solo se ejecute una vez
+
+// 3. El botón sigue funcionando para que el invitado decida pausarla
+if (btnMusica && reproductorMusica) {
+    btnMusica.addEventListener('click', (e) => {
+        e.stopPropagation(); // Evita que este clic active el evento global de arriba
+        if (musicaReproduciendo) {
+            reproductorMusica.pause();
+            btnMusica.textContent = '🔇 Reproducir Música';
+            musicaReproduciendo = false;
+        } else {
+            encenderMusica();
+        }
+    });
+}
