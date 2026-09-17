@@ -44,7 +44,7 @@ async function cargarInvitados() {
 
         invitados.forEach(invitado => {
             // Construimos la URL personalizada
-            const enlaceUnico = `${window.location.origin}/invitacion.html?token=${invitado.token}`;
+            const enlaceUnico = `${window.location.origin}${window.location.pathname.replace('admin.html', 'invitacion.html')}?token=${invitado.token}`;
             
             // Asignamos el color según el estado
             let claseEstado = 'pendiente';
