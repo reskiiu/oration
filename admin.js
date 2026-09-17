@@ -2,7 +2,7 @@
 const API_URL = 'https://backend-boda-dghi.onrender.com/api';
 
 // Conexión para visualizar cada cambio a tiempo real usando Socket.io
-const socket = io('http://localhost:3000');
+const socket = io('https://backend-boda-dghi.onrender.com');
 
 // Referencias a los elementos del HTML
 const formInvitado = document.getElementById('form-invitado');
