@@ -112,3 +112,9 @@ async function eliminarInvitacion(token) {
         }
     }
 }
+
+// Cambia esto:
+// const API_URL = 'http://localhost:3000/api';
+
+// Por tu nueva URL de Render:
+const API_URL = 'https://backend-boda-dghi.onrender.com';
