@@ -1,5 +1,5 @@
 // URL de tu servidor backend local
-const API_URL = 'http://localhost:3000/api';
+const API_URL = 'https://backend-boda-dghi.onrender.com';
 
 console.log("1. El archivo invitacion.js cargó correctamente");
 
@@ -124,4 +124,3 @@ if (elementoDias && elementoHoras && elementoMinutos && elementoSegundos) {
 // const API_URL = 'http://localhost:3000/api';
 
 // Por tu nueva URL de Render:
-const API_URL = 'https://backend-boda-dghi.onrender.com';
