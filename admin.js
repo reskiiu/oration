@@ -1,4 +1,4 @@
-// URL base de tu servidor backend local
+// URL de tu servidor backend en Render
 const API_URL = 'https://backend-boda-dghi.onrender.com/api';
 
 // Conexión para visualizar cada cambio a tiempo real usando Socket.io
@@ -19,7 +19,7 @@ formInvitado.addEventListener('submit', async (e) => {
         const respuesta = await fetch(`${API_URL}/invitados`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ nombres: nombre }) // Enviamos el nombre al que va dirigida la invitación[cite: 1]
+            body: JSON.stringify({ nombres: nombre })
         });
 
         if (respuesta.ok) {
@@ -43,16 +43,19 @@ async function cargarInvitados() {
         tablaInvitados.innerHTML = '';
 
         invitados.forEach(invitado => {
-            // Construimos la URL personalizada
-            const enlaceUnico = `${window.location.origin}${window.location.pathname.replace('index.html', 'invitacion.html')}?token=${invitado.token}`;
+            // 👇 SOLUCIÓN A PRUEBA DE BALAS PARA EL ENLACE 👇
+            // Obtenemos la ruta base sin importar cómo se llame la carpeta en GitHub
+            const rutaBase = window.location.href.substring(0, window.location.href.lastIndexOf('/'));
+            
+            // Construimos el enlace forzando que abra el archivo de la invitación para que solo puedan ver ese apartado[cite: 1]
+            const enlaceUnico = `${rutaBase}/invitacion.html?token=${invitado.token}`;
             
             // Asignamos el color según el estado
             let claseEstado = 'pendiente';
             if(invitado.estadoAsistencia === 'Asistirá') claseEstado = 'asistira';
             if(invitado.estadoAsistencia === 'No asistirá') claseEstado = 'no-asistira';
 
-            // Insertamos la fila en la tabla para validar quiénes confirmaron asistencia[cite: 1]
-// Insertamos la fila en la tabla
+            // Insertamos la fila en la tabla
             const fila = document.createElement('tr');
             fila.innerHTML = `
                 <td>${invitado.nombres}</td>
@@ -79,7 +82,7 @@ socket.on('actualizacionAsistencia', (datos) => {
     const estadoBadge = document.getElementById(`estado-${datos.token}`);
     
     if (estadoBadge) {
-        // Actualizamos el texto a tiempo real[cite: 1]
+        // Actualizamos el texto a tiempo real
         estadoBadge.textContent = datos.nuevoEstado;
         
         // Actualizamos el color
@@ -112,8 +115,3 @@ async function eliminarInvitacion(token) {
         }
     }
 }
-
-// Cambia esto:
-// const API_URL = 'http://localhost:3000/api';
-
-// Por tu nueva URL de Render:
