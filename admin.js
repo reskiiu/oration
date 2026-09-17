@@ -1,5 +1,5 @@
 // URL base de tu servidor backend local
-const API_URL = 'https://backend-boda-dghi.onrender.com';
+const API_URL = 'https://backend-boda-dghi.onrender.com/api';
 
 // Conexión para visualizar cada cambio a tiempo real usando Socket.io
 const socket = io('http://localhost:3000');

@@ -1,5 +1,5 @@
 // URL de tu servidor backend local
-const API_URL = 'https://backend-boda-dghi.onrender.com';
+const API_URL = 'https://backend-boda-dghi.onrender.com/api';
 
 console.log("1. El archivo invitacion.js cargó correctamente");
 
